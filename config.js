@@ -251,6 +251,105 @@ window.RULES_CONFIG = [
   hidden: false,
   severity: 'error',
   category: 'Structure'
+},
+{
+  id: 'smallcaps-word-boundary',
+  name: 'Small caps whole word check',
+  description: 'Flags <span class="fv-smallcaps"> or <span class="fv-allsmallcaps"> that splits or wraps only part of a word.',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Typography'
+},
+{
+  id: 'smallcaps-underlying-casing',
+  name: 'Small caps & Heading underlying casing check',
+  description: 'Flags small caps text and heading text that start with a lowercase letter instead of proper Sentence/Title case.',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Typography'
+},
+{
+  id: 'dropcap-inline-preceding',
+  name: 'Drop cap preceding inline check',
+  description: 'Flags drop cap paragraphs (<p class="dropcaps...">) that are preceded by inline elements like <span epub:type="pagebreak"> or <a> before text.',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Structure'
+},
+{
+  id: 'chapter-top-padding',
+  name: 'Chapter top padding class check',
+  description: 'Flags when the top-level <div> inside <body> is missing class="page_top_padding" or class="sink_25".',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Structure'
+},
+{
+  id: 'crossref-page-link-text',
+  name: 'Page cross-reference link check',
+  description: 'Flags unlinked page number references (e.g. "see page 24") and anchors linking to pages that do not use "this page" as link text.',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Links & Refs'
+},
+{
+  id: 'fraction-markup-format',
+  name: 'Fraction markup format check',
+  description: 'Flags raw keyboard slashes used for fractions (e.g. "1/2") in visible text. Must use Unicode vulgar glyphs (½) or <span class="numerator">1</span>&#x2044;<span class="denominator">2</span>.',
+  enabled: true,
+  hidden: false,
+  severity: 'warn',
+  category: 'Typography'
+},
+{
+  id: 'footnote-structure-check',
+  name: 'Footnote structure check',
+  description: 'Validates that internal footnote callouts have class="fnref" and footnote destination anchors inside <p class="fn"> have class="fndest". External note links are skipped.',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Links & Refs'
+},
+{
+  id: 'poetry-line-p-check',
+  name: 'Poetry line class check',
+  description: 'Flags <p> tags inside poetry sections missing standard PRH poetry classes (poetry0–poetry6) or empty spacer <p> tags between stanzas.',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Structure'
+},
+{
+  id: 'pullquote-omission-check',
+  name: 'Pull quote omission check',
+  description: 'Flags pull quotes (<aside class="pullquote">, <p class="pq">, epub:type="pullquote"). Per PRH Spec §2.8.2, pull quotes should be omitted in ebook conversion.',
+  enabled: true,
+  hidden: false,
+  severity: 'warn',
+  category: 'Structure'
+},
+{
+  id: 'table-structure-check',
+  name: 'Table structure check',
+  description: 'Validates HTML tables: must include <thead> with <th> headers and <tbody>, cell text must be wrapped in <p>, and <tr> must not have class or style attributes.',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Structure'
+},
+{
+  id: 'endnote-reference-check',
+  name: 'Endnote reference class check',
+  description: 'Validates that numbered endnote callout anchors in body text linking to an endnote document (e.g. nts.xhtml#note_1, notes.xhtml#en1) have class="enref".',
+  enabled: true,
+  hidden: false,
+  severity: 'error',
+  category: 'Links & Refs'
 }
 ];
 

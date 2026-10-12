@@ -103,24 +103,28 @@
 
 
 
-<!-- ✅ Should NOT flag — correct structure -->
-<div role="list">
-  <p role="listitem">Item 1</p>
-  <p role="listitem">Item 2</p>
-</div>
 
 
-<!-- ❌ Should flag — no class -->
-<img src="../images/test1.jpg" alt=""/>
+<table id="table-1">
+  
+    <thead><th><p class="tb">tes</p></th></thead>
+    <tbody>
+    <td><p class="tb">Function of Money</p></td>
+    <td><p class="tb">Governments</p></td>
 
-<!-- ❌ Should flag — wrong class -->
-<img src="../images/test2.jpg" class="something" alt=""/>
+  <tr>
+    <td><p class="tb">Store of value</p></td>
+    <td><p class="tb">International reserves</p></td>
+  </tr>
+  </tbody>
+</table>
 
-<!-- ✅ Should NOT flag — has fill -->
-<img src="../images/test3.jpg" class="fill" alt=""/>
 
-<!-- ✅ Should NOT flag — has fill_height -->
-<img src="../images/test4.jpg" class="fill_height" alt=""/>
+
+
+
+
+
 
 
 </div>
